@@ -1,5 +1,6 @@
 def main():
-    print('Hi there')
+    while True:
+        cmd = input('Enter command: ')
 
 
 if __name__ == '__main__':

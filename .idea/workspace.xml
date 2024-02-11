@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e71873d9-4265-4018-a52c-301b1ea973fc" name="Changes" comment="start" />
+    <list default="true" id="e71873d9-4265-4018-a52c-301b1ea973fc" name="Changes" comment="start">
+      <change beforePath="$PROJECT_DIR$/../goitneo-python-hw-2-group-7/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../goitneo-python-hw-2-group-7/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../goitneo-python-hw-2-group-7" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Racot86"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="00eefe7b-b75f-43e1-8662-7965ec96727a" />
+        <option name="url" value="https://github.com/Racot86/goitneo-python-hw-2-group-7.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
@@ -21,7 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -231,7 +250,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707684170047</updated>
-      <workItem from="1707684171267" duration="322000" />
+      <workItem from="1707684171267" duration="764000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <option name="closed" value="true" />
@@ -265,7 +284,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707684485095</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="start">
+      <option name="closed" value="true" />
+      <created>1707684501707</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707684501707</updated>
+    </task>
+    <task id="LOCAL-00006" summary="start">
+      <option name="closed" value="true" />
+      <created>1707684627498</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707684627498</updated>
+    </task>
+    <task id="LOCAL-00007" summary="start">
+      <option name="closed" value="true" />
+      <created>1707684793362</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707684793362</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,18 +329,7 @@
     <MESSAGE value="start" />
     <option name="LAST_COMMIT_MESSAGE" value="start" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$main.coverage" NAME="main Coverage Results" MODIFIED="1707684208504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$main.coverage" NAME="main Coverage Results" MODIFIED="1707684756920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
