@@ -10,7 +10,6 @@ c_bold = colors.CBOLD
 c_cmd_text = colors.CYELLOW2
 c_warning = colors.CRED
 
-
 weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 
@@ -19,17 +18,15 @@ def output_month(data):
         match_dict = {}
         for c in data:
             i = c['contact']
-            match_dict[i['name']] = datetime(datetime.now().year, i['birthday'].month, i['birthday'].day)
-        print('\n' + spaces + perssy + 'This month birthdays:\n')
+            match_dict[i.name] = datetime(datetime.now().year, i.birth_date.month, i.birth_date.day)
 
         new_d = dict(sorted(match_dict.items(), key=lambda item: item[1]))
 
         for k, v in new_d.items():
-            print('               ' + "{:>20}: {:<15}".format(c_highlight + v.strftime("%d/%m") + c_end, k))
-        print('\n')
+            a_print("{:>7}: {:<15}".format(v.strftime("%d/%m"), k), main_color=c_cmd)
 
     else:
-        print('               ' + c_wrong + '<no birthdays>' + c_end)
+        a_print('  <no birthdays>', main_color=c_title)
 
 
 def output_week(data):
@@ -47,10 +44,9 @@ def output_week(data):
         wk_list[weekdays[wk]].append(i.name)
     for wk, names in wk_list.items():
         if (len(names)) > 0:
-            a_print("{:>12}: {:<15}".format(wk, ', '.join(names)), main_color=c_cmd)
+            a_print("{:>11}: {:<15}".format(wk, ', '.join(names)), main_color=c_cmd)
         else:
-            a_print("{:>12}: {:<15}".format(wk, '<no birthdays>'),main_color=c_title)
-    print('\n')
+            a_print("{:>11}: {:<15}".format(wk, '<no birthdays>'), main_color=c_title)
 
 
 def match_time(today, time_range, contacts):
@@ -78,28 +74,13 @@ def get_time_delta_for_next_week(wk_date):
     return delta
 
 
-def upcoming_birthday(cmd):
-    cmd.pop(0)
-    if len(cmd) == 2 and cmd[1].lower() == 'birthdays':
-        today = datetime.now()
-        # today = datetime(2024,12,22)
-        match_list = []
-        match cmd[0].lower():
-            case 'week':
-                next_week_monday = today + timedelta(days=get_time_delta_for_next_week(today))
-                output_week(match_time(next_week_monday, 6))
-            case 'month':
-                eom = datetime(today.year, today.month + 1, 1) - timedelta(days=1)
-                output_month(match_time(today, (eom.date() - today.date()).days))
-            case _:
-                print(
-                    '\n' + spaces + perssy + c_wrong + 'Time period for command upcoming birthdays not recognised.' + c_end + '\n')
-
-    else:
-        print('\n' + spaces + perssy + c_wrong + 'Command not recognised.' + c_end + '\n')
-
-
 def this_week_birthday(contacts):
     today = datetime.now()
     next_week_monday = today + timedelta(days=get_time_delta_for_next_week(today))
     output_week(match_time(next_week_monday, 6, contacts))
+
+
+def next_month_birthday(contacts):
+    today = datetime.now()
+    eom = datetime(today.year, today.month + 1, 1) - timedelta(days=1)
+    output_month(match_time(today, (eom.date() - today.date()).days, contacts))

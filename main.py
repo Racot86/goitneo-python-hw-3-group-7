@@ -13,6 +13,7 @@ from libraries.functions.save_contacts import save_contacts
 from libraries.functions.show_command import show_command
 from libraries.functions.delete_command import delete_command
 from libraries.functions.change_command import change_command
+from libraries.functions.help_command import help_command
 
 # defining contacts  user list
 contacts = AddressBook(load_contacts())
@@ -45,6 +46,8 @@ def process_command(cmd):
         case "change":
             contacts = change_command(cmd, contacts)
             contacts = load_contacts()
+        case "help":
+            help_command()
         case _:
             a_print('Command not recognized',
                     wait_after=0.5,

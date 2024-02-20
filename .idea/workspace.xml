@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94fda564-c6ff-49b4-b21d-0347541ae380" name="Changes" comment="begining!">
-      <change afterPath="$PROJECT_DIR$/contacts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/change_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/delete_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/display_contact_details.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/hello_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/load_contacts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/save_contacts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/show_birthdays.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/show_command.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libraries/functions/str_to_bool.py" afterDir="false" />
+    <list default="true" id="94fda564-c6ff-49b4-b21d-0347541ae380" name="Changes" comment="almost final">
+      <change afterPath="$PROJECT_DIR$/libraries/functions/help_command.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/functions/a_print.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/functions/a_print.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/functions/add_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/functions/add_command.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/functions/boiler_plate.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/functions/boiler_plate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraries/functions/cls_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/functions/cls_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contacts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/functions/show_birthdays.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/functions/show_birthdays.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries/functions/show_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/libraries/functions/show_command.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +159,7 @@
       <updated>1707850800789</updated>
       <workItem from="1707850801861" duration="9326000" />
       <workItem from="1708018315570" duration="15220000" />
-      <workItem from="1708099761737" duration="46561000" />
+      <workItem from="1708099761737" duration="52246000" />
     </task>
     <task id="LOCAL-00001" summary="begining!">
       <option name="closed" value="true" />
@@ -179,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708034263748</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="almost final">
+      <option name="closed" value="true" />
+      <created>1708457109625</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708457109625</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,12 +197,13 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="begining!" />
-    <option name="LAST_COMMIT_MESSAGE" value="begining!" />
+    <MESSAGE value="almost final" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost final" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$pytest_in__.coverage" NAME="pytest in / Coverage Results" MODIFIED="1707854770655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$cls_command.coverage" NAME="cls_command Coverage Results" MODIFIED="1708027738010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libraries/functions" />
-    <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$main.coverage" NAME="main Coverage Results" MODIFIED="1708456447890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$main.coverage" NAME="main Coverage Results" MODIFIED="1708465848997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$class_address_book.coverage" NAME="class_address_book Coverage Results" MODIFIED="1708022030173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libraries/classes" />
     <SUITE FILE_PATH="coverage/goitneo_python_hw_2_group_7$a_print.coverage" NAME="a_print Coverage Results" MODIFIED="1708026932204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libraries/functions" />
   </component>

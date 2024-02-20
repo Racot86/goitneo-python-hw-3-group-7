@@ -3,7 +3,7 @@ from libraries.classes.class_colors import colors
 
 from libraries.functions.display_contact_details import display_contact_details
 from libraries.functions.a_print import a_print
-from libraries.functions.show_birthdays import this_week_birthday
+from libraries.functions.show_birthdays import this_week_birthday, next_month_birthday
 
 c_title = colors.CGREEN
 c_end = colors.CEND
@@ -60,6 +60,7 @@ def show_command(cmd, contacts):
                             a_print('LIST OF THIS MONTH BIRTHDAYS', prefix='< ',
                                     main_color=c_title,
                                     prefix_color=c_cmd + c_bold)
+                            next_month_birthday(contacts)
                     else:
                         a_print('Wrong number of parameters',
                                 prefix=' WARNING! ',
