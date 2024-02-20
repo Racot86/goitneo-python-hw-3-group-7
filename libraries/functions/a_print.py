@@ -2,7 +2,7 @@ import time, random
 from libraries.classes.class_colors import colors
 
 
-def a_print(data, prefix='', wait_after=0.1, main_color='', prefix_color='',speed=0.01):
+def a_print(data, prefix='', wait_after=0.1, main_color='', prefix_color='',speed=0.01, end='\n'):
     n = 1
     s = ''
     for line in data:
@@ -12,7 +12,7 @@ def a_print(data, prefix='', wait_after=0.1, main_color='', prefix_color='',spee
             time.sleep(speed)
         else:
             print(prefix_color + prefix + colors.CEND + main_color + s + colors.CEND, end='')
-            print(end='\n')
+            print(end=end)
             time.sleep(wait_after)
         n += 1
 
