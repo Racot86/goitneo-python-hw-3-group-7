@@ -1,6 +1,13 @@
 import time, random
 from libraries.classes.class_colors import colors
 
+c_title = colors.CGREEN
+c_end = colors.CEND
+c_cmd = colors.CGREEN2
+c_bold = colors.CBOLD
+c_cmd_text = colors.CYELLOW2
+c_warning = colors.CRED
+
 
 def a_print(data, prefix='', wait_after=0.1, main_color='', prefix_color='',speed=0.01, end='\n'):
     n = 1

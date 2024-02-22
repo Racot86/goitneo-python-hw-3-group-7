@@ -2,6 +2,7 @@
 from libraries.classes.class_address_book import Record, AddressBook
 from libraries.classes.class_colors import colors
 
+from random import random
 from libraries.functions.boiler_plate import boiler_plate
 from libraries.functions.a_print import a_print
 from libraries.functions.cls_command import cls
@@ -63,7 +64,8 @@ boiler_plate()
 a_print(' .................. ' + c_bold + c_cmd + str(len(contacts)) + c_end + c_title + ' contacts',
         main_color=c_bold + c_title,
         prefix='ADDRESS BOOK',
-        prefix_color=c_cmd)
+        prefix_color=c_cmd
+        )
 print('')
 a_print('Welcome to P.E.R.S.S.Y.! ' + c_cmd + 'Enter help command' + c_end + c_title + ' to view available options',
         prefix='MESSAGE: ',
