@@ -71,8 +71,48 @@ def show_command(cmd, contacts):
                     match = False
                     for contact in contacts.values():
                         if contact.name.lower() == cmd[0].lower():
-                            display_contact_details(contact)
-                            match = True
+                            if len(cmd) == 1:
+                                display_contact_details(contact)
+                                match = True
+                            else:
+                                match cmd[1].lower():
+                                    case 'tel':
+                                        if contact.phones != []:
+                                            a_print(', '.join(contact.phones))
+                                        else:
+                                            a_print(f'{contact.name} does not have a phone')
+                                        match = True
+                                    case 'bday':
+                                        if contact.birth_date != '':
+                                            a_print(contact.birth_date.strftime("%d-%m-%Y"))
+                                        else:
+                                            a_print(f'{contact.name} does not have a birth date entered')
+                                        match = True
+                                    case 'email':
+                                        if contact.email != '':
+                                            a_print(contact.email)
+                                        else:
+                                            a_print(f'{contact.name} does not have a e-mail address')
+                                        match = True
+                                    case 'fav':
+                                        if contact.favorite:
+                                            a_print(f'{contact.name} in favorites')
+                                        else:
+                                            a_print(f'{contact.name} not in favorites')
+                                        match = True
+                                    case 'address':
+                                        if contact.address != '':
+                                            a_print(f'{contact.address}')
+                                        else:
+                                            a_print(f'{contact.name} does not have address')
+                                        match = True
+                                    case 'note':
+                                        if contact.note != '':
+                                            a_print(f'{contact.note}')
+                                        else:
+                                            a_print(f'{contact.name} does not have notes')
+                                        match = True
+
                     if not match:
                         a_print('Parameter not found', prefix='WARNING!', main_color=c_title, prefix_color=c_warning)
         else:

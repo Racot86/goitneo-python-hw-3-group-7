@@ -21,20 +21,9 @@ def error_test(func):
         try:
             return func(*args, **kwargs)
         except ValueError as err:
-
             a_print(err, prefix='WARNING: ', prefix_color=c_warning, main_color=c_title)
         except IndexError:
-            if func.__name__ == 'convert_string_to_date':
-                a_print('Wrong date format. Birth date will not be changed\n', prefix='WARNING: ',
-                        prefix_color=c_warning, main_color=c_title)
-                return ''
-            else:
-                a_print('wrong number of arguments', prefix='WARNING: ', prefix_color=c_warning, main_color=c_title)
-        except TypeError as err:
-            if func.__name__ == 'add_command':
-                a_print('Contact has error in telephone number.', prefix='  WARNING! ',
-                        prefix_color=c_warning,
-                        main_color=c_title)
+            a_print('wrong number of arguments', prefix='WARNING: ', prefix_color=c_warning, main_color=c_title)
 
     return inner
 
@@ -51,27 +40,6 @@ def contact_not_exists(contact, contacts):
         return False
 
 
-@error_test
-def convert_string_to_date(val):
-    s_val = val.split('/')
-    return datetime(int(s_val[2]), int(s_val[1]), int(s_val[0]))
-
-
-@error_test
-def check_phone_format(val):
-    for p in val:
-        if len(p) <= 10:
-            if not p.isdigit():
-                val.remove(p)
-                a_print('Contact has wrong phone number/s', prefix='WARNING: ', prefix_color=c_warning,
-                        main_color=c_title)
-        else:
-            a_print('Wrong number length. Number cannot be longer than 10 digits. Number will not be added to '
-                    'contact', prefix='WARNING: ', prefix_color=c_warning, main_color=c_title)
-            val.remove(p)
-    return val
-
-
 def extract_value(what, from_to):
     return from_to.replace(what, '')
 
@@ -83,40 +51,33 @@ def parameter_getter(cmd, contact, contacts):
 
         psn = par.find('bday:')
         if psn != -1:
-            val = extract_value('bday:', par)
-            check = convert_string_to_date(val)
-            if check != '':
-                contact.birth_date = check
+            contact.add_birth_day( extract_value('bday:', par))
             continue
 
         psn = par.find('tel:')
         if psn != -1:
             val = extract_value('tel:', par)
-            contact.phones = check_phone_format(val.split(','))
+            contact.add_phone(val.split(','))
             continue
 
         psn = par.find('address:')
         if psn != -1:
-            val = extract_value('address:', par)
-            contact.address = val
+            contact.add_address(extract_value('address:', par))
             continue
 
         psn = par.find('fav:')
         if psn != -1:
-            val = extract_value('fav:', par)
-            contact.favorite = str2bool(val)
+            contact.add_favorite(extract_value('fav:', par))
             continue
 
         psn = par.find('note:')
         if psn != -1:
-            val = extract_value('note:', par)
-            contact.note = val.replace('_', ' ')
+            contact.add_note(extract_value('note:', par))
             continue
 
         psn = par.find('email:')
         if psn != -1:
-            val = extract_value('email:', par)
-            contact.email = val
+            contact.add_email(extract_value('email:', par))
             continue
 
         psn = par.find('name:')
@@ -127,7 +88,9 @@ def parameter_getter(cmd, contact, contacts):
                 contacts.pop(contact.name)
                 contact.name = val
             else:
-                a_print(f'contact with name {val} already exists')
+                a_print(f'contact with name <{val}> already exists', prefix="WARNING! ",
+                        prefix_color=c_cmd_text,
+                        main_color=c_title)
             continue
 
     return contacts

@@ -15,7 +15,7 @@ def a_print(data, prefix='', wait_after=0.1, main_color='', prefix_color='',spee
     for line in data:
         s += line
         if s != data:
-            print(prefix_color + prefix + colors.CEND + main_color + s + colors.CEND, end='\r')
+            print(prefix_color + prefix + colors.CEND + main_color + s + '\u2588', end='\r')
             time.sleep(speed)
         else:
             print(prefix_color + prefix + colors.CEND + main_color + s + colors.CEND, end='')

@@ -77,7 +77,7 @@ a_print('Welcome to P.E.R.S.S.Y.! ' + c_cmd + 'Enter help command' + c_end + c_t
 def main():
     while True:
         cmd = input('\n' + c_cmd + c_bold + 'COMMAND> ' + c_end + c_cmd)
-        a_print('processing <' + c_cmd + c_bold + cmd + c_end + c_title + '> command . . .', prefix='> ',
+        a_print(f'processing {c_cmd}<{cmd}>{c_end + c_title} command . . .', prefix='> ',
                 prefix_color=c_bold + c_cmd, main_color=c_title)
         print('')
         if format_command(cmd)[0] in ['exit', 'end', 'quit']:
