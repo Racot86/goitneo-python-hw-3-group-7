@@ -4,6 +4,7 @@ from datetime import datetime
 from libraries.functions.display_contact_details import display_contact_details
 from libraries.functions.save_contacts import save_contacts
 from libraries.functions.str_to_bool import str2bool
+from libraries.functions.show_birthdays import this_week_birthday, next_month_birthday
 
 from libraries.classes.class_colors import colors
 
@@ -149,6 +150,18 @@ class AddressBook(UserDict):
                 else:
                     a_print(f'Operation {c_cmd}aborted.', prefix='< ', prefix_color=c_cmd, main_color=c_title)
                     break
+
+    def show_birthdays_next_week(self):
+        a_print('LIST OF NEXT WEEK BIRTHDAYS', prefix='< ',
+                main_color=c_title,
+                prefix_color=c_cmd + c_bold)
+        this_week_birthday(self.data)
+
+    def show_birthdays_this_month(self):
+        a_print('LIST OF THIS MONTH BIRTHDAYS', prefix='< ',
+                main_color=c_title,
+                prefix_color=c_cmd + c_bold)
+        next_month_birthday(self.data)
 
     def records(self):
         return self.data

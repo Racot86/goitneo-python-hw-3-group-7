@@ -52,15 +52,9 @@ def show_command(cmd, contacts):
                 case 'birthdays':
                     if len(cmd) == 3:
                         if cmd[1].lower() == 'next' and cmd[2].lower() == 'week':
-                            a_print('LIST OF NEXT WEEK BIRTHDAYS', prefix='< ',
-                                    main_color=c_title,
-                                    prefix_color=c_cmd + c_bold)
-                            this_week_birthday(contacts)
+                            contacts.show_birthdays_next_week()
                         elif cmd[1].lower() == 'this' and cmd[2].lower() == 'month':
-                            a_print('LIST OF THIS MONTH BIRTHDAYS', prefix='< ',
-                                    main_color=c_title,
-                                    prefix_color=c_cmd + c_bold)
-                            next_month_birthday(contacts)
+                            contacts.show_birthdays_this_month()
                     else:
                         a_print('Wrong number of parameters',
                                 prefix=' WARNING! ',
