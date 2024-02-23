@@ -1,8 +1,8 @@
 # importing py files
-from libraries.classes.class_address_book import Record, AddressBook
+from libraries.classes.class_address_book import AddressBook
 from libraries.classes.class_colors import colors
 
-from random import random
+
 from libraries.functions.boiler_plate import boiler_plate
 from libraries.functions.a_print import a_print
 from libraries.functions.cls_command import cls
@@ -10,7 +10,6 @@ from libraries.functions.format_command import format_command
 from libraries.functions.add_command import add_command
 from libraries.functions.hello_command import hello_command
 from libraries.functions.load_contacts import load_contacts
-from libraries.functions.save_contacts import save_contacts
 from libraries.functions.show_command import show_command
 from libraries.functions.delete_command import delete_command
 from libraries.functions.change_command import change_command
