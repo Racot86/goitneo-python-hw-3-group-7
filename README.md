@@ -10,7 +10,8 @@
     - enter hello command to get greeting from bot
     - use delete command to delete contact
     - use exit or quit or end command to terminate app
-4. class AdressBook - added fuctions to view contacts who will have birthdays next week or this month. Use commands: show birthdays next week, show birthdays this month
+4. class AdressBook - added fuctions to view contacts who will have birthdays next week or this month.
+    - Use commands: show birthdays next week, show birthdays this month
    
 ## Extra task
 
