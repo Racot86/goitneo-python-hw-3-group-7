@@ -1,5 +1,4 @@
 from pathlib import Path
-from datetime import datetime
 import pickle
 
 
@@ -10,4 +9,3 @@ def load_contacts():
     else:
         print('no contacts')
         return []
-

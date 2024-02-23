@@ -1,10 +1,5 @@
 from libraries.classes.class_colors import colors
 import time
-import random
-import math
-
-
-from libraries.functions.a_print import a_print
 
 c_title = colors.CGREEN
 c_end = colors.CEND
@@ -35,4 +30,3 @@ def boiler_plate():
         time.sleep(0.03)
     print(f' {c_cmd}P.E.R.S.S.Y.{c_end + c_title} - Personal Assistant Terminal v1.3')
     print(c_cmd + '-------------------------------------------------' + c_end)
-

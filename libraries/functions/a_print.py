@@ -1,6 +1,6 @@
-import time, random
+import time
 from libraries.classes.class_colors import colors
-import re
+
 
 c_title = colors.CGREEN
 c_end = colors.CEND
@@ -34,7 +34,8 @@ def a_print(data, prefix='', wait_after=0.1, main_color='', prefix_color='', spe
             p += 1
         output = prefix_color + prefix + colors.CEND + main_color + data[0: p] + '\u2588' + colors.CEND
         print(output, end='\r')
-    print(output.replace('\u2588', ' '))
+    print(output.replace('\u2588', ' '), end=end)
+    time.sleep(wait_after)
 
 
 if __name__ == '__main__':

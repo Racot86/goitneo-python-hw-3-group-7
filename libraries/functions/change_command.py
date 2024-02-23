@@ -1,11 +1,7 @@
-from libraries.classes.class_address_book import AddressBook, Record
 from libraries.classes.class_colors import colors
 
 from libraries.functions.a_print import a_print
 from libraries.functions.display_contact_details import display_contact_details
-from libraries.functions.str_to_bool import str2bool
-
-from datetime import datetime
 from libraries.functions.save_contacts import save_contacts
 
 c_title = colors.CGREEN
@@ -51,7 +47,7 @@ def parameter_getter(cmd, contact, contacts):
 
         psn = par.find('bday:')
         if psn != -1:
-            contact.add_birth_day( extract_value('bday:', par))
+            contact.add_birth_day(extract_value('bday:', par))
             continue
 
         psn = par.find('tel:')
@@ -113,4 +109,3 @@ def change_command(cmd, contacts):
         if not match:
             a_print('Contact not found', prefix=" WARNING! ", main_color=c_title, prefix_color=c_cmd_text)
             return contacts
-

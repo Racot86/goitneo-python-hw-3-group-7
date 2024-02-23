@@ -3,7 +3,6 @@ from libraries.classes.class_colors import colors
 
 from libraries.functions.a_print import a_print
 
-
 c_title = colors.CGREEN
 c_end = colors.CEND
 c_cmd = colors.CGREEN2
@@ -66,7 +65,6 @@ def parameter_getter(cmd):
             continue
 
     return contact
-
 
 
 def add_command(cmd, contacts):

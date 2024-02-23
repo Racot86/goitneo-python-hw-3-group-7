@@ -45,8 +45,6 @@ def date_error_test(func):
                     prefix_color=c_warning,
                     main_color=c_title)
 
-
-
     return inner
 
 
@@ -95,7 +93,6 @@ class Record:
                     prefix_color=c_warning,
                     main_color=c_title)
 
-
     def add_email(self, email):
         if find_matches('@', email) == 1 and find_matches('.', email) != 0:
             self.email = email
@@ -110,9 +107,8 @@ class Record:
     def add_note(self, note):
         self.note = note.strip().replace('_', ' ')
 
-    def add_favorite(self,fav):
+    def add_favorite(self, fav):
         self.favorite = str2bool(fav)
-
 
 
 class AddressBook(UserDict):

@@ -1,4 +1,4 @@
-from libraries.classes.class_address_book import Record, AddressBook
+from libraries.classes.class_address_book import AddressBook
 from libraries.classes.class_colors import colors
 
 from libraries.functions.display_contact_details import display_contact_details
