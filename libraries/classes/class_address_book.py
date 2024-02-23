@@ -39,11 +39,13 @@ def date_error_test(func):
     def inner(*args, **kwargs):
         try:
             return func(*args, **kwargs)
-        except IndexError:
+        except IndexError or TypeError or ValueError:
             a_print('Wrong date format. Format must be dd/mm/yyyy. Birth date will be not added to contact data\n',
                     prefix='WARNING: ',
                     prefix_color=c_warning,
                     main_color=c_title)
+
+
 
     return inner
 
@@ -64,10 +66,10 @@ class Record:
             try:
                 check = int(phone[p])
             except ValueError:
-                a_print(f'Phone number <{phone[p]}> must contain {c_cmd}only digits.', prefix='WARNING! ',
+                a_print(f'Phone number <{phone[p]}> must contain {c_cmd}only digits.', prefix='  WARNING! ',
                         main_color=c_title,
                         prefix_color=c_warning)
-                a_print(f'Phone number {c_cmd}not added{c_end + c_title} to contact data.', prefix='         ',
+                a_print(f'Phone number {c_cmd}not added{c_end + c_title} to contact data.', prefix='           ',
                         main_color=c_title,
                         prefix_color=c_warning)
             else:
@@ -75,17 +77,24 @@ class Record:
                     self.phones.append(phone[p])
                 else:
                     a_print(f'Phone number <{phone[p]}> must be a {c_cmd}ten{c_end + c_title} digits.',
-                            prefix='WARNING! ',
+                            prefix='  WARNING! ',
                             main_color=c_title,
                             prefix_color=c_cmd_text)
-                    a_print('Phone number not added to contact data.', prefix='         ',
+                    a_print('Phone number not added to contact data.', prefix='           ',
                             main_color=c_title,
                             prefix_color=c_warning)
 
     @date_error_test
     def add_birth_day(self, bday=''):
         s_val = bday.split('/')
-        self.birth_date = datetime(int(s_val[2]), int(s_val[1]), int(s_val[0]))
+        try:
+            self.birth_date = datetime(int(s_val[2]), int(s_val[1]), int(s_val[0]))
+        except ValueError:
+            a_print('Wrong date format. Format must be dd/mm/yyyy. Birth date will be not added to contact data\n',
+                    prefix='  WARNING: ',
+                    prefix_color=c_warning,
+                    main_color=c_title)
+
 
     def add_email(self, email):
         if find_matches('@', email) == 1 and find_matches('.', email) != 0:

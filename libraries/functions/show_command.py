@@ -78,39 +78,65 @@ def show_command(cmd, contacts):
                                 match cmd[1].lower():
                                     case 'tel':
                                         if contact.phones != []:
-                                            a_print(', '.join(contact.phones))
+                                            a_print(f'{contact.name} phone(s) {c_cmd}{', '.join(contact.phones)}',
+                                                    prefix='< ',
+                                                    prefix_color=c_cmd,
+                                                    main_color=c_title)
                                         else:
-                                            a_print(f'{contact.name} does not have a phone')
+                                            a_print(f'{contact.name} does not have a phone', prefix='< ',
+                                                    prefix_color=c_cmd, main_color=c_title)
                                         match = True
                                     case 'bday':
                                         if contact.birth_date != '':
-                                            a_print(contact.birth_date.strftime("%d-%m-%Y"))
+                                            a_print(f'{contact.name} birth day is {c_cmd}{contact.birth_date.strftime("%d-%m-%Y")}',
+                                                    prefix='< ',
+                                                    prefix_color=c_cmd,
+                                                    main_color=c_title)
+
                                         else:
-                                            a_print(f'{contact.name} does not have a birth date entered')
+                                            a_print(f'{contact.name} does not have a birth date entered', prefix='< ',
+                                                    prefix_color=c_cmd, main_color=c_title)
                                         match = True
                                     case 'email':
                                         if contact.email != '':
-                                            a_print(contact.email)
+                                            a_print(
+                                                f'{contact.name} e-mail is {c_cmd}{contact.email}',
+                                                prefix='< ',
+                                                prefix_color=c_cmd,
+                                                main_color=c_title)
                                         else:
-                                            a_print(f'{contact.name} does not have a e-mail address')
+                                            a_print(f'{contact.name} does not have a e-mail address', prefix='< ',
+                                                    prefix_color=c_cmd, main_color=c_title)
                                         match = True
                                     case 'fav':
                                         if contact.favorite:
-                                            a_print(f'{contact.name} in favorites')
+                                            a_print(f'{contact.name} in favorites', prefix='< ',
+                                                    prefix_color=c_title, main_color=c_title)
                                         else:
-                                            a_print(f'{contact.name} not in favorites')
+                                            a_print(f'{contact.name} {c_cmd}not{c_end + c_title} in favorites', prefix='< ',
+                                                    prefix_color=c_title, main_color=c_title)
                                         match = True
                                     case 'address':
                                         if contact.address != '':
-                                            a_print(f'{contact.address}')
+                                            a_print(
+                                                f'{contact.name} address is {c_cmd}{contact.address}',
+                                                prefix='< ',
+                                                prefix_color=c_cmd,
+                                                main_color=c_title)
                                         else:
-                                            a_print(f'{contact.name} does not have address')
+                                            a_print(f'{contact.name} does not have address', prefix='< ',
+                                                    prefix_color=c_cmd, main_color=c_title)
                                         match = True
                                     case 'note':
                                         if contact.note != '':
-                                            a_print(f'{contact.note}')
+                                            a_print(
+                                                f'{contact.name} is {c_cmd}{contact.email}',
+                                                prefix='< ',
+                                                prefix_color=c_cmd,
+                                                main_color=c_title)
                                         else:
-                                            a_print(f'{contact.name} does not have notes')
+                                            a_print(f'{contact.name} does not have notes', prefix='< ',
+                                                    prefix_color=c_cmd, main_color=c_title)
                                         match = True
 
                     if not match:

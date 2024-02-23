@@ -68,7 +68,7 @@ def parameter_getter(cmd):
     return contact
 
 
-@error_test
+
 def add_command(cmd, contacts):
     cmd.pop(0)
     if len(cmd) > 0:

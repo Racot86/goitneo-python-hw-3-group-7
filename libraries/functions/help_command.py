@@ -16,7 +16,7 @@ def help_command():
         {'cmd': 'show',
          'syntax': 'show <contact name> or <contacts> or <birthdays next week> or <birthdays this month>',
          'short': 'Displays contact details or list of available contacts.',
-         'example': 'show Dmytro, show contacts',
+         'example': 'show Dmytro, show contacts, show Dmytro tel, show birthdays next week, show birthdays next month, show favorites',
          },
         {'cmd': 'add',
          'syntax': 'add <contact name> <tel:data> <bday:dd/mm/yyyy> <fav:(false or true)> <email:data> <note:data>',
@@ -32,7 +32,23 @@ def help_command():
          'syntax': 'change <contact name> <name:data> <tel:data> <bday:dd/mm/yyyy> <fav:(false or true)> <email:data> <note:data>',
          'short': 'Changes contacts data. ',
          'example': 'change Dmytro, change Dmytro bday:09/06/1986, change Dmytro name:Dmytro2 bday:04/06/1986 tel:0970279618',
+         },
+        {'cmd': 'clear',
+         'syntax': 'clear',
+         'short': 'clears screen',
+         'example': 'clear',
+         },
+        {'cmd': 'hello',
+         'syntax': 'hello',
+         'short': 'P.E.R.S.S.Y. will great you',
+         'example': 'hello',
+         },
+        {'cmd': 'exit',
+         'syntax': 'exit, quit, end',
+         'short': 'exits the application',
+         'example': 'exit, quit, end',
          }
+
 
     ]
 
